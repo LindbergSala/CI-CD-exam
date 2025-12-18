@@ -17,10 +17,21 @@ function Confirmation() {
           <Input label="When" type="text" customClass="confirmation__input" defaultValue={confirmation.when.replace("T", " ")} disabled="disabled" />
           <Input label="Who" type="text" customClass="confirmation__input" defaultValue={confirmation.people} disabled="disabled" />
           <Input label="Lanes" type="text" customClass="confirmation__input" defaultValue={confirmation.lanes} disabled="disabled" />
-          <Input label="Booking number" type="text" customClass="confirmation__input" defaultValue={confirmation.bookingId} disabled="disabled" data-testid="booking-id" />
+          <Input 
+            label="Booking number" 
+            type="text" 
+            customClass="confirmation__input" 
+            defaultValue={confirmation.bookingId} 
+            disabled="disabled" 
+            /* Måste kunna läsa av bokningsnumret i testet */
+            data-testid="booking-id" 
+          />
           <article className="confirmation__price">
             <p>Total:</p>
-            <p data-testid="total-price">{confirmation.price} sek</p>
+            <p 
+                /* Måste kunna läsa av totalpriset för att se att det stämmer */
+                data-testid="total-price"
+            >{confirmation.price} sek</p>
           </article>
           <button className="button confirmation__button">Sweet, let's go!</button>
         </form>
