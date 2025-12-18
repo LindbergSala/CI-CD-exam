@@ -148,7 +148,7 @@ function Booking() {
         removeShoe={removeShoe}
         shoes={shoes}
       />
-      <button className="button booking__button" onClick={book}>
+      <button className="button booking__button" onClick={book} data-testid="book-btn">
         strIIIIIike!
       </button>
       {error ? <ErrorMessage message={error} /> : ""}
